@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Citas ITI - Registra Tu Cita Hoy!!</title>
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom fonts for this template -->
+    <link
+        href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,200i,300,300i,400,400i,600,600i,700,700i,900,900i"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Merriweather:300,300i,400,400i,700,700i,900,900i"
+        rel="stylesheet">
+    <link href="vendor/fontawesome-free/css/all.css" rel="stylesheet" type="text/css">
+
+    <!-- Custom styles for this template -->
+    <link href="css/coming-soon.min.css" rel="stylesheet">
+    <style>
+        .center {
+            margin: 0;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            -ms-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+        }
+    </style>
+    <style>
+        .box {
+            position: absolute;
+            
+        }
+
+        .select {
+            background: #fff;
+            padding: 15 px;
+            height: 55px;
+            border: none;
+            font-size: 20px;
+            -webkit-appearance: none;
+        }
+    </style>
+</head>
+
+<body>
+
+</body>
+<div class="overlay"></div>
+<video playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop">
+    <source src="mp4/SomosTecNM.mp4" type="video/mp4">
+</video>
+
+<div class="masthead">
+    <div class="masthead-bg"></div>
+    <div class="container h-100">
+        <div class="row h-100">
+            <div class="col-12 my-auto">
+                <div class="masthead-content text-white py-5 py-md-0">
+                    <font color="white">
+                        <a href="/">
+                            <font color="white">
+                                <h1 class="mb-3">Instituto Tecnologico<br />
+                                    Del Istmo
+                                </h1>
+                            </font>
+                        </a>
+                    </font>
+                    <!-- <p class="mb-5">Registra tu cita Hoy
+                        <strong>
+                            <script>
+                                var meses = new Array("Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre");
+                                var f = new Date();
+                                document.write(f.getDate() + " de " + meses[f.getMonth()] + " de " + f.getFullYear());
+                            </script>
+                        </strong> &nbsp; Nuestros Departamentos estaran disponibles en los horarios extablecidos
+                        para atender tus citas. <br>(<a href="">
+                            <font color="white"><i class="fas fa-info"> Info</i></font>
+                        </a>)
+                    </p> -->
+                    <div class="input-group input-group-newsletter">
+                        <input type="text" class="form-control select" placeholder="Nombre Completo"
+                            aria-label="Ingresa Tu Nombre Completo ..." aria-describedby="submit-button" name="nC"
+                            value="<%= nombreCitante %>" disabled>
+                        <div class="input-group-append">
+                            <button class="btn btn-secondary" type="button" id="submit-button" disabled> <i
+                                    class="fas fa-user-check"></i></button>
+                        </div>
+                    </div>
+
+
+                    <div class="input-group input-group-newsletter">
+                        <!-- <div class=" form-control"> -->
+                            <select class="select form-control" name="typeCita" id="typeCita">
+                                <option value="">Selecciona Tu Motivo de Cita..</option>
+                                <option value="">Solicitud de cambio de escuela</option>
+                                <option value="">solicitud de reposicion de credencial</option>
+                                <option value="">otras cosas que no </option>
+                                <option value="">otras cosas que no 4</option>
+                                <option value="">otras cosas que no 5</option>
+                                <option value="">otras cosas que no otras cosas que no otras cosas que no otras cosas que no6</option>
+                            </select>
+                        <!-- </div> -->
+                        <div class="input-group-append">
+                            <button class="btn btn-secondary" type="button" id="submit-button" disabled><i
+                                    class="fas fa-list"></i></button>
+                        </div>
+                    </div>
+
+                    <div class="input-group input-group-newsletter">
+                        <select class="select form-control" name="typeCita" id="typeCita">
+                            <option value="">Selecciona Tu Horario Disponible</option>
+                            <option value="">10:50pm</option>
+                            <option value="">10:50pm </option>
+                            <option value="">10:50pm</option>
+                            <option value="">10:50pm</option>
+                            <option value="">10:50pm</option>
+                        </select>
+                        <div class="input-group-append">
+                            <button class="btn btn-secondary" type="button" id="submit-button" disabled><i class="fas fa-clock"></i></button>
+                        </div>
+                    </div>
+                    <br />
+                    <br />
+                    <div class="input-group input-group-newsletter">
+
+                        <div class="input-group-append center">
+                            <center>
+                                <button class="btn btn-secondary" type="submit" id="submit-button"> <i
+                                        class="fas fa-user-check"></i>Generar Cita</button>
+                            </center>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="social-icons">
+    <ul class="list-unstyled text-center mb-0">
+        <li class="list-unstyled-item">
+            <a href="#">
+                <i class="fas fa-user-circle"></i>
+            </a>
+        </li>
+        <li class="list-unstyled-item">
+            <a href="https://www.facebook.com/tecnm.campus.istmo/" target="blank">
+                <i class="fab fa-facebook-f"></i>
+            </a>
+        </li>
+        <li class="list-unstyled-item">
+            <a href="https://istmo.tecnm.mx/" target="blank">
+                <i class="fas fa-globe"></i>
+            </a>
+        </li>
+    </ul>
+</div>
+
+<!-- Bootstrap core JavaScript -->
+<script src="vendor/jquery/jquery.min.js"></script>
+<script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+<!-- Custom scripts for this template -->
+<script src="js/coming-soon.min.js"></script>
+<script type="text/javascript">
+    if (document.addEventListener) {
+        document.addEventListener('contextmenu', function (e) {
+            e.preventDefault();
+        }, false);
+    } else {
+        document.attachEvent('oncontextmenu', function () {
+            window.event.returnValue = false;
+        });
+    }
+
+    window.onload = function () {
+        crear_select();
+    }
+
+    function isMobileDevice() {
+        return (typeof window.orientation !== "undefined") || (navigator.userAgent.indexOf('IEMobile') !== -1);
+    };
+
+
+    var li = new Array();
+    function crear_select() {
+        var div_cont_select = document.querySelectorAll("[data-mate-select='active']");
+        var select_ = '';
+        for (var e = 0; e < div_cont_select.length; e++) {
+            div_cont_select[e].setAttribute('data-indx-select', e);
+            div_cont_select[e].setAttribute('data-selec-open', 'false');
+            var ul_cont = document.querySelectorAll("[data-indx-select='" + e + "'] > .cont_list_select_mate > ul");
+            select_ = document.querySelectorAll("[data-indx-select='" + e + "'] >select")[0];
+            if (isMobileDevice()) {
+                select_.addEventListener('change', function () {
+                    _select_option(select_.selectedIndex, e);
+                });
+            }
+            var select_optiones = select_.options;
+            document.querySelectorAll("[data-indx-select='" + e + "']  > .selecionado_opcion ")[0].setAttribute('data-n-select', e);
+            document.querySelectorAll("[data-indx-select='" + e + "']  > .icon_select_mate ")[0].setAttribute('data-n-select', e);
+            for (var i = 0; i < select_optiones.length; i++) {
+                li[i] = document.createElement('li');
+                if (select_optiones[i].selected == true || select_.value == select_optiones[i].innerHTML) {
+                    li[i].className = 'active';
+                    document.querySelector("[data-indx-select='" + e + "']  > .selecionado_opcion ").innerHTML = select_optiones[i].innerHTML;
+                };
+                li[i].setAttribute('data-index', i);
+                li[i].setAttribute('data-selec-index', e);
+                // funcion click al selecionar 
+                li[i].addEventListener('click', function () { _select_option(this.getAttribute('data-index'), this.getAttribute('data-selec-index')); });
+
+                li[i].innerHTML = select_optiones[i].innerHTML;
+                ul_cont[0].appendChild(li[i]);
+
+            }; // Fin For select_optiones
+        }; // fin for divs_cont_select
+    } // Fin Function 
+
+
+
+    var cont_slc = 0;
+    function open_select(idx) {
+        var idx1 = idx.getAttribute('data-n-select');
+        var ul_cont_li = document.querySelectorAll("[data-indx-select='" + idx1 + "'] .cont_select_int > li");
+        var hg = 0;
+        var slect_open = document.querySelectorAll("[data-indx-select='" + idx1 + "']")[0].getAttribute('data-selec-open');
+        var slect_element_open = document.querySelectorAll("[data-indx-select='" + idx1 + "'] select")[0];
+        if (isMobileDevice()) {
+            if (window.document.createEvent) { // All
+                var evt = window.document.createEvent("MouseEvents");
+                evt.initMouseEvent("mousedown", false, true, window, 0, 0, 0, 0, 0, false, false, false, false, 0, null);
+                slect_element_open.dispatchEvent(evt);
+            } else if (slect_element_open.fireEvent) { // IE
+                slect_element_open.fireEvent("onmousedown");
+            } else {
+                slect_element_open.click();
+            }
+        } else {
+
+
+            for (var i = 0; i < ul_cont_li.length; i++) {
+                hg += ul_cont_li[i].offsetHeight;
+            };
+            if (slect_open == 'false') {
+                document.querySelectorAll("[data-indx-select='" + idx1 + "']")[0].setAttribute('data-selec-open', 'true');
+                document.querySelectorAll("[data-indx-select='" + idx1 + "'] > .cont_list_select_mate > ul")[0].style.height = hg + "px";
+                document.querySelectorAll("[data-indx-select='" + idx1 + "'] > .icon_select_mate")[0].style.transform = 'rotate(180deg)';
+            } else {
+                document.querySelectorAll("[data-indx-select='" + idx1 + "']")[0].setAttribute('data-selec-open', 'false');
+                document.querySelectorAll("[data-indx-select='" + idx1 + "'] > .icon_select_mate")[0].style.transform = 'rotate(0deg)';
+                document.querySelectorAll("[data-indx-select='" + idx1 + "'] > .cont_list_select_mate > ul")[0].style.height = "0px";
+            }
+        }
+
+    } // fin function open_select
+
+    function salir_select(indx) {
+        var select_ = document.querySelectorAll("[data-indx-select='" + indx + "'] > select")[0];
+        document.querySelectorAll("[data-indx-select='" + indx + "'] > .cont_list_select_mate > ul")[0].style.height = "0px";
+        document.querySelector("[data-indx-select='" + indx + "'] > .icon_select_mate").style.transform = 'rotate(0deg)';
+        document.querySelectorAll("[data-indx-select='" + indx + "']")[0].setAttribute('data-selec-open', 'false');
+    }
+
+
+    function _select_option(indx, selc) {
+        if (isMobileDevice()) {
+            selc = selc - 1;
+        }
+        var select_ = document.querySelectorAll("[data-indx-select='" + selc + "'] > select")[0];
+
+        var li_s = document.querySelectorAll("[data-indx-select='" + selc + "'] .cont_select_int > li");
+        var p_act = document.querySelectorAll("[data-indx-select='" + selc + "'] > .selecionado_opcion")[0].innerHTML = li_s[indx].innerHTML;
+        var select_optiones = document.querySelectorAll("[data-indx-select='" + selc + "'] > select > option");
+        for (var i = 0; i < li_s.length; i++) {
+            if (li_s[i].className == 'active') {
+                li_s[i].className = '';
+            };
+            li_s[indx].className = 'active';
+
+        };
+        select_optiones[indx].selected = true;
+        select_.selectedIndex = indx;
+        select_.onchange();
+        salir_select(selc);
+    }
+
+</script>
+
+</html>
